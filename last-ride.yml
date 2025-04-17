@@ -1,0 +1,9 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://gateway.openfaas:8080
+functions:
+  last-ride-nonflow:
+    lang: golang-middleware
+    handler: ./services/last-ride
+    image: danenherdi/last-ride-nonflow:0.1.0

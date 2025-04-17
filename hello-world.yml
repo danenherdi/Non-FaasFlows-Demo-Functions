@@ -1,0 +1,9 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://gateway.openfaas:8080
+functions:
+  hello-world-nonflow:
+    lang: golang-middleware
+    handler: ./services/hello-world
+    image: danenherdi/hello-world-nonflow:0.1.0

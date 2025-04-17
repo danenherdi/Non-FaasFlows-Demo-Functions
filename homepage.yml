@@ -1,0 +1,9 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://gateway.openfaas:8080
+functions:
+  homepage-nonflow:
+    lang: golang-middleware
+    handler: ./services/homepage
+    image: danenherdi/homepage-nonflow:0.1.0

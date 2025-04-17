@@ -1,0 +1,9 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://gateway.openfaas:8080
+functions:
+  user-info-nonflow:
+    lang: golang-middleware
+    handler: ./services/user-info
+    image: danenherdi/user-info-nonflow:0.1.0
