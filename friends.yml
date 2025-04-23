@@ -1,0 +1,9 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://gateway.openfaas:8080
+functions:
+  friends-nonflow:
+    lang: golang-middleware
+    handler: ./services/friends
+    image: danenherdi/friends-nonflow:0.1.0
