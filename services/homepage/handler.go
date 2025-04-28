@@ -50,7 +50,7 @@ func Handle(w http.ResponseWriter, r *http.Request) {
 	})
 	req, err := http.NewRequest(
 		"POST",
-		"http://gateway.openfaas:8080/function/ride-recommend-nonflow",
+		"http://127.0.0.1:8080/function/ride-recommend-nonflow",
 		bytes.NewBuffer(reqBody),
 	)
 	if err != nil {
@@ -98,7 +98,7 @@ func Handle(w http.ResponseWriter, r *http.Request) {
 	})
 	req, err = http.NewRequest(
 		"POST",
-		"http://gateway.openfaas:8080/function/user-info-nonflow",
+		"http://127.0.0.1:8080/function/user-info-nonflow",
 		bytes.NewBuffer(reqBody),
 	)
 	if err != nil {
