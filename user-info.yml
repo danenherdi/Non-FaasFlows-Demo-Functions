@@ -7,3 +7,9 @@ functions:
     lang: golang-middleware
     handler: ./services/user-info
     image: danenherdi/user-info-nonflow:0.1.0
+    limits:
+      cpu: 500m
+      memory: 512Mi
+      requests:
+        cpu: 100m
+        memory: 128Mi
