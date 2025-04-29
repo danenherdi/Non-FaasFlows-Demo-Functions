@@ -1,5 +1,6 @@
 import http from 'k6/http';
-import { sleep } from 'k6';
+import { check, sleep } from 'k6';
+
 
 export const options = {
     stages: [
@@ -14,7 +15,7 @@ export default function () {
     const userId = validUserIds[Math.floor(Math.random() * validUserIds.length)];
     const origin = `${(Math.random() * 90).toFixed(6)},${(Math.random() * 90).toFixed(6)}`;
 
-    const url = 'http://gateway.openfaas:8080/function/homepage-nonflow';
+    const url = 'http://127.0.0.1:8080/function/homepage-nonflow';
     const params = {
         headers: {
             'Content-Type': 'application/json',

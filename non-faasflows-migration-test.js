@@ -1,5 +1,5 @@
 import http from 'k6/http';
-import { sleep } from 'k6';
+import { check, sleep } from 'k6';
 
 // Constants for RPS (Requests Per Second)
 const HOMEPAGE_RPS = 100;
@@ -39,20 +39,20 @@ export default function () {
 
     if (random < HOMEPAGE_PROBABILITY) {
         // Homepage request (100 RPS)
-        url = 'http://gateway.openfaas:8080/function/homepage-nonflow';
+        url = 'http://127.0.0.1:8080/function/homepage-nonflow';
         payload = JSON.stringify({
             user_id: userId,
             origin: origin
         });
     } else if (random < HOMEPAGE_PROBABILITY + RIDE_HISTORY_PROBABILITY) {
         // Ride History request (200 RPS)
-        url = 'http://gateway.openfaas:8080/function/ride-history-nonflow';
+        url = 'http://127.0.0.1:8080/function/ride-history-nonflow';
         payload = JSON.stringify({
             user_id: userId
         });
     } else {
         // Friends request (50 RPS)
-        url = 'http://gateway.openfaas:8080/function/friends-nonflow';
+        url = 'http://127.0.0.1:8080/function/friends-nonflow';
         payload = JSON.stringify({
             user_id: userId
         });
