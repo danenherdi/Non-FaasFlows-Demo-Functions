@@ -8,8 +8,8 @@ functions:
     handler: ./services/friends
     image: danenherdi/friends-nonflow:0.1.0
     limits:
-      cpu: 500m
-      memory: 512Mi
+      cpu: 250m
+      memory: 256Mi
       requests:
-        cpu: 100m
-        memory: 128Mi
+        cpu: 50m
+        memory: 64Mi
