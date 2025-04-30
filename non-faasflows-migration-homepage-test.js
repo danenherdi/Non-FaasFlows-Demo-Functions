@@ -25,7 +25,7 @@ export default function () {
     };
 
     // Homepage request
-    const url = 'http://127.0.0.1:8080/function/homepage-nonflow'; // Replace with your actual endpoint
+    const url = 'http://127.0.0.1:8080/function/homepage-nonflow';
     const payload = JSON.stringify({
         user_id: userId,
         origin: origin

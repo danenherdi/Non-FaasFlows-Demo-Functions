@@ -25,7 +25,7 @@ export default function () {
     };
 
     // Ride History request
-    const url = 'http://127.0.0.1:8080/function/ride-history-nonflow'; // Replace with your actual endpoint
+    const url = 'http://127.0.0.1:8080/function/ride-history-nonflow';
     const payload = JSON.stringify({
         user_id: userId,
         origin: origin
